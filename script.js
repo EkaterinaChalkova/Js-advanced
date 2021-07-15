@@ -1,48 +1,3 @@
-// const goods = [
-//     { title: 'Shirt', price: 150 },
-//     { title: 'Socks', price: 50 },
-//     { title: 'Jacket', price: 350 },
-//     { title: 'Shoes', price: 250 },
-//   ];
-  
-//   const renderGoodsItem = (title, price) => {
-//     return `<div class="goods-item"><img src="http://unsplash.it/150/200?random&amp;gravity=center" alt=""></img><h3>${title}</h3><p>${price}</p></div>`;
-  
-//   };
-  
-//   const renderGoodsList = (list) => {
-//     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
-//     document.querySelector('.goods-list').innerHTML = goodsList.join('');
-//   }
-  
-//   renderGoodsList(goods);
-
-
-// class Basket {
-//     constructor(...arg) {
-//         this.good = good;
-//     }
-
-//     render() {
-
-//     }
-
-//     clear() {
-
-//     }
-// }
-
-// class BasketItem {
-//     constructor(...arg) {
-//         this.price = price;
-//         this.title = title;
-//     }
-
-//     addItem() {
-
-//     }
-// }
-
 
 
 class GoodsItem {
@@ -50,6 +5,10 @@ class GoodsItem {
         this.title = title;
         this.price = price;
     }
+
+    // getPrice(){
+    //     return this.price
+    // }
 
     render() {
         return `<div class="goods-item"><img src="http://unsplash.it/150/200?random&amp;gravity=center" alt=""></img><h3>${this.title}</h3><p>${this.price}</p></div>`
@@ -96,22 +55,155 @@ list.fetchGoods();
 list.render();
 list.getTotalSum()
 
-class Basket extends GoodsList{
-    constructor(...args) {
-        super(...args)
-    }
+// class Basket extends GoodsList{
+//     constructor(...args) {
+//         super(...args)
+//     }
 
-    clearAll() {}
+//     clearAll() {}
 
-    addItem() {}
+//     addItem() {}
 
-    removeItem() {}
-}
+//     removeItem() {}
+// }
 
 
-class BasketItem extends GoodsItem {
-    constructor(...args) {
-        super(...args);
-        this.count = 0;
-    }
-}
+// class BasketItem extends GoodsItem {
+//     constructor(...args) {
+//         super(...args);
+//         this.count = 0;
+//     }
+// }
+
+
+
+
+// =========================
+
+
+// class Good {
+//     constructor(title, price) {
+//         this.title = title;
+//         this.price = price;
+//     }
+
+//     getPrice() {
+//         return this.price;
+//     }
+
+//     render() {
+//         return `<div class="goods-item"><h3>${this.title}</h3><p>${this.price}</p></div>`;
+//     }
+// }
+
+// class GoodInCart extends Good {
+//     constructor(title, price, quantity = 1) {
+//         super(title, price);
+
+//         this.quantity = quantity;
+//     }
+
+//     getPrice() {
+//         return this.price * this.quantity;
+//     }
+
+//     render() {
+//         return `<div class="goods-item"><h3>${this.title}</h3><p>${this.price}</p></div>`;
+//     }
+// }
+
+
+// class GoodList {
+//     constructor (goods, container) {
+//         this._goods = goods;
+//         this.goodsListContainer = container
+//     }
+
+//     renderGoodsList() {
+//         let goodsList = this.goods.map(
+//                 item => item.render()
+//             ).join(' ');
+    
+//         this.goodsListContainer.insertAdjacentHTML('beforeend', goodsList);
+//     }
+// }
+
+// const list = new GoodList([
+//     new Good('Bread', 15),
+//     new Good('Eggs', 20),
+//     new Good('Beer', 45),
+//     new Good('Fish', 98),
+// ], document.querySelector('.goods-list'))
+
+// const cart = new GoodList([
+//     new GoodInCart('Bread', 15),
+//     new GoodInCart('Eggs', 20),
+// ],  document.querySelector('.cart'))
+
+// list.renderGoodsList()
+
+
+
+
+
+// ===================
+
+
+// const goods = [
+//     { title: 'Shirt', price: 150 },
+//     { title: 'Socks', price: 50 },
+//     { title: 'Jacket', price: 350 },
+//     { title: 'Shoes', price: 250 },
+//   ];
+  
+//   const renderGoodsItem = (title, price) => {
+//     return `<div class="goods-item"><h3>${title}</h3><p>${price}</p></div>`;
+//   };
+  
+//   const renderGoodsList = (list) => {
+//     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
+//     document.querySelector('.goods-list').innerHTML = goodsList.join(' ');
+//   }
+  
+//   renderGoodsList(goods);
+
+// -------------------------
+
+
+
+// class GoodsItem {
+//     constructor(title, price) {
+//       this.title = title;
+//       this.price = price;
+//     }
+//     render() {
+//       return `<div class="goods-item"><h3>${this.title}</h3><p>${this.price}</p></div>`;
+//     }
+//   }
+  
+//   class GoodsList {
+//     constructor() {
+//       this.goods = [];
+//     }
+//     fetchGoods() {
+//       this.goods = [
+//         { title: 'Shirt', price: 150 },
+//         { title: 'Socks', price: 50 },
+//         { title: 'Jacket', price: 350 },
+//         { title: 'Shoes', price: 250 },
+//       ];
+//     }
+//     render() {
+//       let listHtml = '';
+//       this.goods.forEach(good => {
+//         const goodItem = new GoodsItem(good.title, good.price);
+//         listHtml += goodItem.render();
+//       });
+//       document.querySelector('.goods-list').innerHTML = listHtml;
+//     }
+//   }
+
+  
+//   const list = new GoodsList();
+// list.fetchGoods();
+// list.render();
