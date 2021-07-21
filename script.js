@@ -1,65 +1,5 @@
 
 
-// class GoodsItem {
-//     constructor(title, price) {
-//         this.title = title;
-//         this.price = price;
-//     }
-
-//     // getPrice(){
-//     //     return this.price
-//     // }
-
-//     render() {
-//         return `<div class="goods-item"><img src="http://unsplash.it/150/200?random&amp;gravity=center" alt=""></img><h3>${this.title}</h3><p>${this.price}</p></div>`
-//     }
-// }
-
-// class GoodsList {
-//     constructor() {
-//         this.goods = [];
-//     }
-
-//     fetchGoods() {
-//         this.goods = [
-//           { title: 'Shirt', price: 150 },
-//           { title: 'Socks', price: 50 },
-//           { title: 'Jacket', price: 350 },
-//           { title: 'Shoes', price: 250 },
-//         ]
-//     }
-
-//     render() {
-//         let listHtml = '';
-//         this.goods.forEach(good => {
-//             const goodItem = new GoodsItem(good.title, good.price);
-//             listHtml += goodItem.render();
-//         });
-//         document.querySelector('.goods-list').innerHTML = listHtml;
-//         console.log(list)
-//     }
-
-//     getTotalSum() {
-//       //   let sum = 0;
-//       //   this.goods.forEach(el => {
-//       //       el.price += sum;
-//       //       console.log(sum)
-//       //   })
-//       let totalSum = this.goods.reduce((acc, item) => acc + item.price, 0);
-//       console.log(totalSum)
-//     }
-// }
-
-// const list = new GoodsList();
-// list.fetchGoods();
-// list.render();
-// list.getTotalSum()
-
-
-
-// =========================
-
-
 class Good {
     constructor({id_product:id, product_name:title, price}) {
         this.id = id;
@@ -96,15 +36,33 @@ class GoodInCart extends Good {
 class GoodList {
     constructor (container) {
         this.goods = [];
+        // -----Добавили фильр для регулярных выражений
+        this.filteredGoods = [];
+        // -------------
         this.goodsListContainer = container
     }
 
     add(good) {
         this.goods.push(good)
+        this.filteredGoods.push(good)//Чтобы копировал в фильр гудс
     }
 
-    renderGoodsList() {
-        let goodsList = this.goods.map(
+
+    // Метод, который отвечает за фильтрацию,
+    // будет принимать строку, то что ввел пользователь
+    filter(queryString) {  //На основе этой строки надо созд. регулярное выражение
+        const regex = new RegExp(queryString);
+        this.filteredGoods = this.goods.filter((good) => regex.test(good.title))// Принимаем гуд у регул.выр. вызываем метод тест и передаем строку, строка это название нашего товара, проверяем
+        // что заголовок товара который мы перебираем соответсвует регул.выраж Метод тест возвращает либо тру, либо фолс, если возвр. тру тогда он попадает в новый отфильтрованный массив
+        this.renderGoodsList()
+    }
+
+
+
+    renderGoodsList() {  
+        this.goodsListContainer.textContent = ''//Очистим контейнер, что бы отчистить вывод
+      // Выводить теперь будем не из this.goods.map а из filteredGoods 
+        let goodsList = this.filteredGoods.map(
                 item => item.render()
             ).join(' ');
     
@@ -115,9 +73,9 @@ class GoodList {
 const list = new GoodList(document.querySelector('.goods-list') )
 
 // function makeGETRequest ('https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addToBasket.json') {
-    const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addToBasket.json'
+    // const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addToBasket.json'
 
-    fetch(API)
+    fetch('https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json')
         .then((response) => {
             return response.json()
         })
@@ -148,32 +106,20 @@ const cart = new GoodList([
 
 
 
+const searchEl = document.querySelector('.goods-search');
+const searchBtnEl = document.querySelector('.search-button');
+
+searchBtnEl.addEventListener('click', () => {
+    list.filter(searchEl.value)//У нас есть searchEl и мы от сюда достанем, что ввел пользователь
+})
+
+
+const str = "Lorem ipsum 'dolor sit amet consectetur' adipisicing elit.";
+const regexp1 = str.replace(/'/gi, '"'); // Ищет все вхождения ' и заменяет на "
+console.log(regexp1)
 
 
 
-
-// ===================
-
-
-// const goods = [
-//     { title: 'Shirt', price: 150 },
-//     { title: 'Socks', price: 50 },
-//     { title: 'Jacket', price: 350 },
-//     { title: 'Shoes', price: 250 },
-//   ];
-  
-//   const renderGoodsItem = (title, price) => {
-//     return `<div class="goods-item"><h3>${title}</h3><p>${price}</p></div>`;
-//   };
-  
-//   const renderGoodsList = (list) => {
-//     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
-//     document.querySelector('.goods-list').innerHTML = goodsList.join(' ');
-//   }
-  
-//   renderGoodsList(goods);
-
-// -------------------------
 
 
 

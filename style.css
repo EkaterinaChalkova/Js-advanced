@@ -24,8 +24,13 @@ main {
 .header-icon {
     font-size: x-large;
 }
+
+.search {
+  /* margin-left: 282px; */
+}
   
-.header-button {
+.header-button,
+.search-button {
     font-size: 16px;
     padding: 10px 20px;
     border: unset;
@@ -38,9 +43,25 @@ main {
   
 .header-button:hover {
     color: white;
-    background-color: blueviolet;
-  }
+    background-color: mediumpurple;
+}
+
+.search-button:hover {
+  color: white;
+  background-color: mediumpurple;
+}
   
+.goods-search {
+    padding: 6px;
+    border-radius: 10px;
+    border-color: violet;
+    margin-right: 10px;
+
+  }
+
+
+
+
 .goods-list {
     display: flex;
     flex-flow: row;
