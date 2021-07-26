@@ -1,3 +1,48 @@
+const vue = new Vue({  // Создаем константу вью и вызывает конструктор вью
+    el: '#app', //Здесь указываем настройки для вью, id записывает через решетку, наше приложение будет работать внутри этого эл-та
+    data: {  //Данные нашего приложения.В нем хванятся объект.В этом объекте мы перечисляем переменные, которые будут храниться в памяти нашего приложения
+        name: 'Admin',
+        isModified: false,
+        cart: [],
+        newTitle: '',
+        newPrice: 0,
+        rectangle: {x: 10, y: 15}, //cвойство которое будет переводить из $ в рубли
+        background: {r: 0, g: 0, b: 0},
+        isLoaded: false // переменная загрузки, если фолс будет текст или анимашка, если тру,то выведет разметку
+        
+    },
+    computed: { //Вычисляемое св-во, должны обязательно привязать числа к переменной
+        squre() {
+            return this.rectangle.x * this.rectangle.y
+        },
+        backgroundColor() {
+            return `rgb(${this.background.r}, ${this.background.g}, ${this.background.b})`
+        }
+    },
+    methods: { // Здесь мы перечисляем функции, которые работают внутри нашего прилож.
+        changeName() { //Здесь мы будем менять значение переменной
+            //КО ВСЕМ ПЕРЕМЕННЫМ И КО ВСЕМ ФУНКЦИЯМ МЫ ОБРАЩАЕМСЯ ЧЕРЕЗ THIS
+            this.name = 'John'
+        },
+        modify() { //Эта функция будет менять тру на фолс и наоборот
+            this.isModified = !this.isModified
+        },
+        add() {
+            this.cart.push({title: this.newTitle, price: this.newPrice});
+            this.newPrice = 0; // После того, как мы добавили новые эл-ты,нужно обнулить прайс и тайтл, чтоб старый ввод не сохранялся
+            this.newTitle = '';
+        }
+    },
+    mounted() {// Фун-ция которая срабатыет при подключении вью js, при его создании вызывается ф-ция mounted
+        fetch('/catalogData.json')
+            .then((response) => response.json())
+            .then((data) => setTimeout(() => {
+                this.cart = data
+                this.isLoaded = true
+            }, 5000))
+    }
+})
+
 
 
 class Good {
