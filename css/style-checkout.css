@@ -1,0 +1,183 @@
+.information_for_user {
+    margin-bottom: 93px;
+}
+
+.information__address-item {
+   
+}
+
+.information__address-toggler {
+    display: none;
+}
+
+.information__address-toggler:checked ~ .information__address-register {
+    display: flex;
+    /* border-bottom: 1px solid #b3b2b2; */
+   
+}
+
+.information__address-label {
+    display: block;
+    border-bottom: 1px solid #b3b2b2;
+    font-size: 16px;
+    color: #222222;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 30px 0;
+}
+
+.information__address-label:checked ~ .information__address-register {
+    border-bottom: none;
+}
+
+
+.information__address-register{
+    display: none;
+    border-bottom: 1px solid black; 
+    padding: 40px 0 80px 35px;
+}
+
+.information__address-register_choice {}
+
+.information__address-title {
+    font-size: 13px;
+    color: #222222;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+
+.information__address-subtitle {
+    font-size: 13px;
+    line-height: 20px;
+    color: #b3b2b2;
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+
+.fa-angle-double-right {
+    margin-right: 3px;
+}
+
+.information__address__register-option {
+    margin-bottom: 15px;
+}
+
+.information__address-checkout {
+    margin-right: 14px;
+}
+
+.information__address-title {
+    margin-bottom: 13px;
+    font-size: 13px;
+    color: #222222;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.information__address__register_choice-option {
+    margin-bottom: 30px;
+}
+
+
+.information__address-subtitle-font{
+    font-size: 13px;
+    line-height: 20px;
+    color: #b3b2b2;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.information__address-subtitle-easy {
+    font-size: 13px;
+    line-height: 20px;
+    color: #b3b2b2;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+
+.information__address-button{
+    font-size: 14px;
+    color: #4a4a4a;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #b3b2b2;
+    font-weight: 700;
+    padding: 16px 52px;
+    text-transform: uppercase;
+}
+
+.information__address-button:hover {
+    opacity: 0.9;
+    background-color: #b3b2b2;
+    color: #4a4a4a;
+}
+
+
+.registration__email {
+    margin-left: 295px;
+}
+
+.registration__email-title {
+    font-size: 13px;
+    color: #222222;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.registration__email-subtitle {
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #b3b2b2;
+    font-weight: 400;
+}
+
+.registration-email-input {
+    height: 41px;
+    width: 390px;
+    margin-bottom: 20px;
+}
+
+.registration-password-input {
+    height: 41px;
+    width: 390px;
+    margin-bottom: 21px;
+}
+
+.registration__email-fileds {
+    margin-bottom: 44px;
+    font-size: 13px;
+    line-height: 20px;
+    color: red;
+    font-weight: 600;
+}
+
+.registration__email-button {
+    font-size: 14px;
+    color: #4a4a4a;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #b3b2b2;
+    font-weight: 700;
+    padding: 16px 55px;
+    text-transform: uppercase;
+}
+
+.information__password {
+    margin-left: 31px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222222;
+    font-weight: 600;
+
+}
+
+.sup {
+    color: red;
+    margin: 3px;
+}

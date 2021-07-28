@@ -1,73 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>eShop</title>
-  <link href="style.css" rel="stylesheet"></header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  <header class="header-wrapper">
-    <a class="header-icon">eShop</a>
-    <div class="search">
-      <input type="text" class="goods-search" />
-      <button class="search-button" type="button">Искать</button>
-    </div>
-    <button class="header-button" type="button">Корзина</button>
-  </header>
+  <div>console</div>
+  <div id="app">
+    <header-comp></header-comp>
+    <main-comp></main-comp>
+    <footer-comp></footer-comp>
+  </div>
+  
 
-  <main>
-    <div id="app"><!--Создаем див, даем ему айдишник где будет собственно размещаться вью. Внутри тэга апп приложение вью.Все что внутри апп пишется на специальной разметке вью-->
-      <h1>Hello, {{ name }}</h1><!--Чтобы использовать свойство(переменную) из вью нужно обернуть переменную в двойные фигурные скобки{{ name }} -->
-      <div v-if='isModified'><!--Указывает условие если переменная равна фолс, тогда не показываем. В дом дереве блок не присутствует!-->
-        <input type="text" v-model='name'><!--В качестве значения мы передаем перем. name делается это с помощью дерективы v-model мы устанавливаем нашу переменную как некую модель для инпута
-            Если мы меняет переменную в инпуте то она меняется сразу и на отрисовке это называется двойная привязанность- это называется реактивность -->
-        <button v-on:click='changeName'>Change</button><!--Создали обработчик событий и передали переменную которая будет менять имя при клике-->   
-      </div>
-      <button v-on:click='modify'>modify</button>
-
-      <template v-if='isLoaded'><!--Заглушка пока ждем данные с сервера будет выводится текст или анимашка-->
-        <template v-if='cart.length > 0'>
-          <ul><!--Хотим эл-ты ли отрисовывать в цикл на основе массива-->
-            <li v-for='good of cart'>{{ good.product_name }} ($ {{ good.price }} )</li> <!--v-for синтаксис похож на for of -->
-            <!--А переменную good будут попадать эл-ты по очереди из массива cart. Мы перебираем массив cart и при каждой итерации эл-т будет попадать в good-->
-          </ul>
-        </template>
-        <template v-else>
-          <p>Empty</p> <!--Если массив будет пустой он выведет Empty-->
-        </template>
-        
-      </template>
-
-      <template v-else>
-        <p>loading...</p>
-      </template>
-      
-
-      <input type="text" v-model='newTitle'> <!-- Будет Добавлять новый заголовок в список-->
-      <input type="text" v-model='newPrice'><!-- Будет Добавлять новую цену в список-->
-      <button v-on:click='add'>Add</button>
-
-      <hr>
-
-      <input type="text" v-model='rectangle.x'><!--Вводим 1 число-->
-      <input type="text" v-model='rectangle.y'><!--Вводим 2 число-->
-
-      {{ squre }} <!--Вызываем метод вычисления, он вернет нам площадь-->
-
-      <hr>
-
-      <input type="text" v-model='background.r'><!---->
-      <input type="text" v-model='background.g'>
-      <input type="text" v-model='background.b'><!---->
-
-      <div :style='`width: 100px; height: 100px; background: ${backgroundColor}`'></div><!--Если хотим передать выражения на js то перед style делаем :-->
-
-    </div> 
-    
-    
-    <div class="goods-list"></div>
-  </main>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <script defer src="script.js"></script>
+  <script src="components/header.js"></script>
+  <script src="components/main.js"></script>
+  <script src="components/footer.js"></script>
+  
+  
+
 </body>
-<footer>2021</footer>
+
 </html>

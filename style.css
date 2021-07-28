@@ -1,4 +1,4 @@
-*{
+/* *{
     outline: unset;
     margin: 0;
     padding: 0;
@@ -27,9 +27,9 @@ main {
 
 .search {
   /* margin-left: 282px; */
-}
+/* } */
   
-.header-button,
+/* .header-button,
 .search-button {
     font-size: 16px;
     padding: 10px 20px;
@@ -106,4 +106,4 @@ h3 {
     transform: translate(-50%, -50%);
     background-color: white;
     overflow: auto;
-  }
+  } */ 

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-product.css">
+    <link rel="stylesheet" href="css/style-checkout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header__wrapper container"> <!-- header__wrapper-это оболочка-->
+            <a class="header__icon"href="#">
+                <img class="header__logo-img" src="img/logo.png" alt="icon">
+                <span>
+                    BRAN<span class="header__icon_spacial-case"><b>D</b></span>
+                </span>
+            </a>
+            <form class="header__form" action="#">
+                <button class="header__form-search">
+                    Browse <a href="#"><img class="header__arrow" src="img/arrow-1.png" alt="arrow"></a></button>
+                <input class="header__form-input" type="text" placeholder="   Search for item...  ">
+                <a class="header__button-search" href="#">
+                    <img src="img/search.png" alt="search">
+                </a>
+            </form>
+            <div class="header__controls">
+                <a href="#">
+                    <img class='header__buy-icon' src="img/buy_icon.svg" alt="buy">
+                </a>
+            </div class='header'>
+            <button class="header_button">My Account<img class="header__arrow-button" src="img/arrow-2.png" alt="arrow"></button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="product-page-man.html">MAN</a>
+        <a href="single.html">WOMEN</a>
+        <a href="#">KIDS</a>
+        <a href="checkout.html">ACCOSERIESE</a>
+        <a href="#">FEATURED</a>
+        <a href="shopping.html">HOT DEALS</a>
+    </nav>
+
+    <section class="arrivals">
+        <div class="arrivals-wrapper container">
+            <div class="arrivals-new">
+                New Arrivals 
+            </div>
+            <div class="arrivals-link">
+                <a class="arrivals-link__home" href="index.html"> Home /</a>
+                <a class="arrivals-link__man" href="product-page-man.html">Men  /</a>
+                <a class="arrivals-link__new" href="">New Arrivals </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="information_for_user container">
+      
+        <div class="information__address">
+            <div class="information__address-item">
+                <input class="information__address-toggler" type="checkbox" id="adress">
+                <label class="information__address-label" for="adress">01. Shipping Address</label>
+                <div class="information__address-register">
+                    <div class="information__address-register_choice">
+                        <p class="information__address-title">Check as a guest or register</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <div class="information__address__register-option">
+                            <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">checkout as guest</span>
+                        </div>
+                       <div class="information__address__register_choice-option">
+                        <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">register</span>
+                       </div>
+                        <p class="information__address-title">register and save time!</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <p class="information__address-subtitle-font"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fast and easy checkout</p>
+                        <p class="information__address-subtitle-easy"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Easy access to your order history and status</p>
+                
+                        <button class="information__address-button">continue</button>     
+                    </div>
+
+                    <div class="registration__email">
+                        <p class="registration__email-title"> Already registed?</p>
+                        <p class="registration__email-subtitle">Please log in below</p>
+                        
+                        <form action="#">
+                            <p class="registration__email-title"> email address <sup class="sup">*</sup></p>
+                            <input class="registration-email-input" type="email" >
+                            <p class="registration__email-title">password <sup class="sup">*</sup></p>
+                            <input class="registration-password-input" type="password">
+                            <p class="registration__email-fileds"><sup class="sup">*</sup>Required Fileds</p>
+
+                            <button class="registration__email-button">log in</button>
+                            <a class="information__password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="information__address">
+            <div class="information__address-item">
+                <input class="information__address-toggler" type="checkbox" id="billing">
+                <label class="information__address-label" for="billing">02. billing information</label>
+                <div class="information__address-register">
+                    <div class="information__address-register_choice">
+                        <p class="information__address-title">Check as a guest or register</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <div class="information__address__register-option">
+                            <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">checkout as guest</span>
+                        </div>
+                       <div class="information__address__register_choice-option">
+                        <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">register</span>
+                       </div>
+                        <p class="information__address-title">register and save time!</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <p class="information__address-subtitle-font"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fast and easy checkout</p>
+                        <p class="information__address-subtitle-easy"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Easy access to your order history and status</p>
+                
+                        <button class="information__address-button">continue</button>     
+                    </div>
+
+                    <div class="registration__email">
+                        <p class="registration__email-title"> Already registed?</p>
+                        <p class="registration__email-subtitle">Please log in below</p>
+                        
+                        <form action="#">
+                            <p class="registration__email-title"> email address <sup class="sup">*</sup></p>
+                            <input class="registration-email-input" type="email" >
+                            <p class="registration__email-title">password <sup class="sup">*</sup></p>
+                            <input class="registration-password-input" type="password">
+                            <p class="registration__email-fileds"><sup class="sup">*</sup>Required Fileds</p>
+
+                            <button class="registration__email-button">log in</button>
+                            <a class="information__password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="information__address">
+            <div class="information__address-item">
+                <input class="information__address-toggler" type="checkbox" id="Shipping">
+                <label class="information__address-label" for="Shipping">03. Shipping information</label>
+                <div class="information__address-register">
+                    <div class="information__address-register_choice">
+                        <p class="information__address-title">Check as a guest or register</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <div class="information__address__register-option">
+                            <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">checkout as guest</span>
+                        </div>
+                       <div class="information__address__register_choice-option">
+                        <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">register</span>
+                       </div>
+                        <p class="information__address-title">register and save time!</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <p class="information__address-subtitle-font"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fast and easy checkout</p>
+                        <p class="information__address-subtitle-easy"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Easy access to your order history and status</p>
+                
+                        <button class="information__address-button">continue</button>     
+                    </div>
+    
+                    <div class="registration__email">
+                        <p class="registration__email-title"> Already registed?</p>
+                        <p class="registration__email-subtitle">Please log in below</p>
+                        
+                        <form action="#">
+                            <p class="registration__email-title"> email address <sup class="sup">*</sup></p>
+                            <input class="registration-email-input" type="email" >
+                            <p class="registration__email-title">password <sup class="sup">*</sup></p>
+                            <input class="registration-password-input" type="password">
+                            <p class="registration__email-fileds"><sup class="sup">*</sup>Required Fileds</p>
+    
+                            <button class="registration__email-button">log in</button>
+                            <a class="information__password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="information__address">
+            <div class="information__address-item">
+                <input class="information__address-toggler" type="checkbox" id="method">
+                <label class="information__address-label" for="method">04. Shipping method</label>
+                <div class="information__address-register">
+                    <div class="information__address-register_choice">
+                        <p class="information__address-title">Check as a guest or register</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <div class="information__address__register-option">
+                            <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">checkout as guest</span>
+                        </div>
+                       <div class="information__address__register_choice-option">
+                        <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">register</span>
+                       </div>
+                        <p class="information__address-title">register and save time!</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <p class="information__address-subtitle-font"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fast and easy checkout</p>
+                        <p class="information__address-subtitle-easy"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Easy access to your order history and status</p>
+                
+                        <button class="information__address-button">continue</button>     
+                    </div>
+    
+                    <div class="registration__email">
+                        <p class="registration__email-title"> Already registed?</p>
+                        <p class="registration__email-subtitle">Please log in below</p>
+                        
+                        <form action="#">
+                            <p class="registration__email-title"> email address <sup class="sup">*</sup></p>
+                            <input class="registration-email-input" type="email" >
+                            <p class="registration__email-title">password <sup class="sup">*</sup></p>
+                            <input class="registration-password-input" type="password">
+                            <p class="registration__email-fileds"><sup class="sup">*</sup>Required Fileds</p>
+    
+                            <button class="registration__email-button">log in</button>
+                            <a class="information__password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="information__address">
+            <div class="information__address-item">
+                <input class="information__address-toggler" type="checkbox" id="payment">
+                <label class="information__address-label" for="payment">05. payment method</label>
+                <div class="information__address-register">
+                    <div class="information__address-register_choice">
+                        <p class="information__address-title">Check as a guest or register</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <div class="information__address__register-option">
+                            <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">checkout as guest</span>
+                        </div>
+                       <div class="information__address__register_choice-option">
+                        <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">register</span>
+                       </div>
+                        <p class="information__address-title">register and save time!</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <p class="information__address-subtitle-font"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fast and easy checkout</p>
+                        <p class="information__address-subtitle-easy"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Easy access to your order history and status</p>
+                
+                        <button class="information__address-button">continue</button>     
+                    </div>
+    
+                    <div class="registration__email">
+                        <p class="registration__email-title"> Already registed?</p>
+                        <p class="registration__email-subtitle">Please log in below</p>
+                        
+                        <form action="#">
+                            <p class="registration__email-title"> email address <sup class="sup">*</sup></p>
+                            <input class="registration-email-input" type="email" >
+                            <p class="registration__email-title">password <sup class="sup">*</sup></p>
+                            <input class="registration-password-input" type="password">
+                            <p class="registration__email-fileds"><sup class="sup">*</sup>Required Fileds</p>
+    
+                            <button class="registration__email-button">log in</button>
+                            <a class="information__password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="information__address">
+            <div class="information__address-item">
+                <input class="information__address-toggler" type="checkbox" id="order">
+                <label class="information__address-label" for="order">06. order review</label>
+                <div class="information__address-register">
+                    <div class="information__address-register_choice">
+                        <p class="information__address-title">Check as a guest or register</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <div class="information__address__register-option">
+                            <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">checkout as guest</span>
+                        </div>
+                       <div class="information__address__register_choice-option">
+                        <input class="information__address-checkout" type="radio" name="check"><span class="information__address-title">register</span>
+                       </div>
+                        <p class="information__address-title">register and save time!</p>
+                        <p class="information__address-subtitle">Register with us for future convenience</p>
+                        <p class="information__address-subtitle-font"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fast and easy checkout</p>
+                        <p class="information__address-subtitle-easy"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Easy access to your order history and status</p>
+                
+                        <button class="information__address-button">continue</button>     
+                    </div>
+    
+                    <div class="registration__email">
+                        <p class="registration__email-title"> Already registed?</p>
+                        <p class="registration__email-subtitle">Please log in below</p>
+                        
+                        <form action="#">
+                            <p class="registration__email-title"> email address <sup class="sup">*</sup></p>
+                            <input class="registration-email-input" type="email" >
+                            <p class="registration__email-title">password <sup class="sup">*</sup></p>
+                            <input class="registration-password-input" type="password">
+                            <p class="registration__email-fileds"><sup class="sup">*</sup>Required Fileds</p>
+    
+                            <button class="registration__email-button">log in</button>
+                            <a class="information__password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="new-letter">
+        
+        <div class="add-wrapper container">
+            <div class="new_letter-review">
+                 <img class="new_letter_review-img" src="img/photo-women.png">
+                <article class="new_letter_review-text">
+                    <span class="new_letter_review_text-tittle">
+                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                    </span>
+                    <span class="new_letter_review_text-name"> 
+                            Bin Burhan
+                    </span>
+                    <span class="new_letter_review_text_name-subtitle">
+                        Dhaka, Bd
+                    </span>
+                </article>
+            </div>
+    
+     
+    
+            <div class="subscribe">
+                <h1 class="subscribe_text-title">Subscribe</h1>
+                <p class="subscribe_text-subtitle">
+                            for oup newletter and promotion
+                </p> 
+                <form class="subscribe-form" action="#">
+                    <input class="subscribe_form-input" type="text"  placeholder="Enter Your Email">
+                    <button class="subscribe_form_input-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        </section>
+    
+        <footer class="footer">
+        <div class="footer-nav container">
+            <div class="footer_nav-logo">
+                <a class="header__icon"href="#">
+                    <img class="header__logo-img" src="img/logo.png" alt="icon">
+                    <span>
+                        BRAN<span class="header__icon_spacial-case"><b>D</b></span>
+                    </span>
+                </a>
+                <p class="footer_nav_logo-description">
+                    Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
+                    expanded array of processes and cross-unit partnerships.
+                </p>
+                <p class="footer_nav_logo_description-text">
+                    Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                </p>
+    
+            </div>
+    
+            <div class="information">
+                <h1 class="information-title">company</h1>
+                <ul class="information_title-list">
+                    <li class="information_title_list-categories">
+                       <a class="information_title_list-link" href="#">Home</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Shop</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">About</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">How It Works</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="information">
+                <h1 class="information-title">INFORMATION</h1>
+                <ul class="information_title-list">
+                    <li class="information_title_list-categories">
+                       <a class="information_title_list-link" href="#">Tearms & Condition</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">How to Buy</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">How to Sell</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Promotion</a>
+                    </li>
+                </ul>
+            </div>
+                       
+            <div class="information">
+                <h1 class="information-title">SHOP CATEGORY</h1>
+                <ul class="information_title-list">
+                    <li class="information_title_list-categories">
+                       <a class="information_title_list-link" href="#">Men</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Women</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Child</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Apparel</a>
+                    </li>
+                    <li class="information_title_list-categories">
+                        <a class="information_title_list-link" href="#">Brows All</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-copyright">
+            <div class="footer_copy container">
+                <div class="footer_copy-text">
+                    © 2017  Brand  All Rights Reserved.
+                </div>
+                <div class="footer_copy_text-button">
+                    <a class="footer_copy-social" href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a class="footer_copy-social"href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a class="footer_copy-social" href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a class="footer_copy-social" href="#">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                    <a class="footer_copy-social" href="#">
+                        <i class="fa fa-google-plus" aria-hidden="true" ></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </footer>
+
+
+
+</body>
+</html>
